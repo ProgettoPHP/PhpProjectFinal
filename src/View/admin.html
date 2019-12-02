@@ -1,0 +1,27 @@
+<head>
+	<title>Amministrazione</title>
+	<meta charset="utf-8">
+	<link href="style/header_style.css" rel="stylesheet">
+</head>
+<div id="conteudo">
+	<h1 style="text-align: center">Area riservata - Gestione dei contenuti</h1>
+	<!--il contenuto privato del sito protetto da login e senha amministratore-->
+	<a href="/SimpleMVC/?pagina=admin&metodo=create">*Inserire Articolo</a><br><br><br>
+	<p>Elenco degli articoli:</p>
+	<table border="2" >
+		<tr>
+			<th>DATA</th>
+			<th>TITOLO</th>
+			<th>MODIFICA</th>
+			<th>DELETE</th>
+		</tr>
+		{% for article in articoli %}
+			<tr>
+				<td>{{article.data}}</td>
+				<td>{{article.titolo}}</td>
+				<td><a href="/SimpleMVC/?pagina=admin&metodo=change&id={{article.id}}" style="color:#01A9DB">Modifica</a></td>
+				<td><a href="/SimpleMVC/?pagina=admin&metodo=delete&id={{article.id}}" style="color:#B40404">Delete</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>

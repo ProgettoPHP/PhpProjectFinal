@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<!--path css cartella public-->
+	<link href="style/header_style.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="conteudo"> 
+<section>
+	<h1>Articoli:</h1>
+	
+	<!--exibindo o parametro articolo q passei no controller dentro da view sem precisar criar codigo php e posso colocr esse parametro em qq parte-->
+	
+	<!--codigo for twig usado p iteraritems, oprimeiro nome pode ser qq um-->
+	{% for article in articoli %}
+	<article>
+		<header>
+			<!--passa o nome d atabelaa-->
+			<h2><a href="/?pagina=post&id={{article.id}}">{{article.titolo}}</a></h2>
+			<h3>{{article.data}}</h3>
+		</header>
+
+		<p>{{article.testo}}</p>
+
+		
+
+	</article>
+	 {% endfor %}
+	
+	<!--ve se da pra fazer um for de{{article.image}} pra renderizar as fotos seja aki ou na siglepage-->
+	
+</section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<head>
+	<title>Amministrazione</title>
+	<link href="style/header_style.css" rel="stylesheet">
+</head>
+<div id="conteudo">
+<h1>Inserire Articolo</h1>
+
+<!--mando os dados do form pro metodo insert q vai inseri-los no db-->
+<form action="?pagina=admin&metodo=insert" method="post">
+	<span>Data</span><br>
+	<input type="date" name="data"><br><br>
+
+	<span>Titolo</span><br>
+	<input type="text" name="titolo"><br><br>
+
+	<span>Testo</span><br>
+	<textarea cols="55" rows="5" name="testo"></textarea><br><br>
+<!--retiro o name d botao senao ele envia tb esse valor p o post-->
+	<input type="submit" value="Inserire">
+</form>
+</div>
