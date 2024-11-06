@@ -1,6 +1,6 @@
 {
     "require": {
-        "twig/twig": "^2.9",
+        "twig/twig": "^3.11",
         "php-di/php-di": "^6.0",
         "zendframework/zend-diactoros": "^2.2"
     },
